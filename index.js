@@ -14,7 +14,7 @@ if(process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-mongoose.connect(process.env.mongodburi, {useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
 
 
 const thePort = process.env.PORT || 3001
