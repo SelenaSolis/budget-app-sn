@@ -1,19 +1,23 @@
 const express = require('express')
 const app = express()
-
+const path = require("path")
 let userRoute = require("./routes/userRoute")
 const bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 require("dotenv").config();
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.json());
 app.use('/users', userRoute);
 
-mongoose.connect(process.env.mongodburi, {useNewUrlParser: true});
+if(process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
+mongoose.connect("mongodb+srv://selenasolis:Ss-419057@selena-practice-s1rzj.mongodb.net/budgetApp", {useNewUrlParser: true});
 
 
-const thePort = 3001
+const thePort = process.env.PORT || 3001
 app.listen(thePort, (err) => {
  if (err) {
    return console.log("Error", err);

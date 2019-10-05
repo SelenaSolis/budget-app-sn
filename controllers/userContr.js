@@ -19,7 +19,6 @@ exports.create = function(req, res){
 }
 
 exports.update = function(req,res){
-    console.log("hello")
     User.findByIdAndUpdate(req.body._id, req.body, (err, user)=>{
         return res.json(user);
     })
