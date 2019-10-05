@@ -14,7 +14,7 @@ if(process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-mongoose.connect("mongodb+srv://selenasolis:Ss-419057@selena-practice-s1rzj.mongodb.net/budgetApp", {useNewUrlParser: true});
+mongoose.connect(process.env.mongodburi, {useNewUrlParser: true});
 
 
 const thePort = process.env.PORT || 3001
