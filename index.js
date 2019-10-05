@@ -5,6 +5,15 @@ let userRoute = require("./routes/userRoute")
 const bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 require("dotenv").config();
+var MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost/budgetApp";
+const options = {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+  family: 4 // Use IPv4, skip trying IPv6
+};
+
+mongoose.connect(MONGODB_URI,options);
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.json());
@@ -17,7 +26,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
+
 
 
 const thePort = process.env.PORT || 3001
