@@ -65,7 +65,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    background: bisque;
 }
 
 [tabindex="-1"]:focus {
@@ -558,8 +558,8 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: 20%;
-    margin-left: 20%
+    margin-right: 12%;
+    margin-left: 12%
 }
 
 .no-gutters {
@@ -1874,7 +1874,8 @@ select.form-control:focus::-ms-value {
 
 .form-group {
     margin-bottom: 1rem;
-    margin-top: 1rem
+    margin-top: 1rem;
+    text-align: start;
 }
 
 .form-text {
@@ -4075,7 +4076,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
 .card {
     position: relative;
     display: -ms-flexbox;
-    display: flex;
+    display: inline-block;
     -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;
@@ -4083,7 +4084,8 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: .25rem
+    border-radius: 2.25rem;
+    margin: 3%
 }
 
 .card>hr {

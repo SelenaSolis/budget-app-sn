@@ -26,7 +26,7 @@ class App extends Component {
                             <div className="row">
                                 <div className="col-12 mx-auto pt-3">
                                     <h1 className="text-uppercase mb-4">budget app</h1>
-                                   
+                                    
                                         {/*BudgetForm*/}
                                         <BudgetForm />
 

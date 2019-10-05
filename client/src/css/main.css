@@ -159,6 +159,11 @@ body {
   height: 2rem;
 }
 
+.card-body {
+  border-radius: 2.25rem;
+  background-color: #030005
+}
+
 .budget-card-link {
   background-color: #57a850;
   border: none;
@@ -170,6 +175,7 @@ body {
   font-size: 1.5rem;
   margin: 4px 2px;
 }
+
 .expense-card-link {
   background-color: #c02525;
   border: none;
@@ -188,4 +194,11 @@ body {
 
 .budget-label {
   margin-right: 20px;
+}
+
+.input-box {
+  float: right;
+  margin-right: 3%;
+  width: 35%;
+  border-radius: 25px;
 }

@@ -53,23 +53,23 @@ class ExpenseForm extends Component {
                                 <div className="modal-body">
                                     <div className="form-group">
                                         <label className="budget-label">please enter your expense :  </label>
-                                        <input type="text" id="expense-input" onChange={(e) => {
+                                        <input type="text" id="expense-input" className="input-box" onChange={(e) => {
                                             this.setState({ newExpenseDesc: e.target.value })
                                         }} />
                                     </div>
                                     <div className="form-group">
                                         <label className="budget-label">please enter your expense amount :  </label>
-                                        <input type="number" id="amount-input" onChange={(e) => {
+                                        <input type="number" id="amount-input" className="input-box" onChange={(e) => {
                                             this.setState({dollarAmt: Number(e.target.value)})
                                             let exchAmt = Number(e.target.value) / this.state.exchangeRate
                                             exchAmt = exchAmt.toFixed(2)
                                             this.setState({newExpenseAmt: exchAmt})
                                         }} />
                                     </div>
-                                    <div className="form-group d-inline">
-                                        <label htmlFor="teamName" className="budget-label d-inline" >change currency:  </label>
-                                        <select className="form-control d-inline" id = "currencyDropDwn" defaultValue="USD" onChange = {(e)=>{
-                                            let evt = document.getElementById("currencyDropDwn")
+                                    <div className="form-group">
+                                        <label htmlFor="teamName" className="budget-label" >change currency:  </label>
+                                        <select className="input-box" id = "currency-dd" defaultValue="USD" onChange = {(e)=>{
+                                            let evt = document.getElementById("currency-dd")
                                             let abbr = evt.options[evt.selectedIndex].value
                                             fetch('https://api.exchangeratesapi.io/latest?base=USD')
                                             .then(res => res.json())
@@ -97,7 +97,7 @@ class ExpenseForm extends Component {
                                             <option value="TRY">Turkish Lira</option>
                                         </select>
                                     </div>
-                                    dollars: {this.state.newExpenseAmt}
+                                    Dollars:  {this.state.newExpenseAmt}
                                 </div>
                                 <div className="modal-footer">
                                     <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>

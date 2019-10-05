@@ -31,7 +31,7 @@ class BudgetForm extends Component {
                                 <div className="modal-body">
                                     <div className="form-group">
                                         <label htmlFor="teamName" className="budget-label">Please Enter Your Budget :  </label>
-                                        <input type="Number" id="budget-input" onChange={(e) => {
+                                        <input type="Number" id="budget-input" className="input-box" onChange={(e) => {
                                             this.setState({ user: { ...this.state.user, budget: Number(e.target.value) } })
                                         }} />
                                     </div>

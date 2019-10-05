@@ -26,5 +26,13 @@
   "devDependencies": {
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SelenaSolis/budget-app-sn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SelenaSolis/budget-app-sn/issues"
+  },
+  "homepage": "https://github.com/SelenaSolis/budget-app-sn#readme"
 }
