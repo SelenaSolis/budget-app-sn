@@ -5,7 +5,8 @@ let userRoute = require("./routes/userRoute")
 const bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 require("dotenv").config();
-var MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost/budgetApp";
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budgetApp";
 const options = {
   useNewUrlParser: true,
   useCreateIndex: true,
