@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-let userRoute = require("./server/routes/userRoute")
+let userRoute = require("./routes/userRoute")
 const bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 require("dotenv").config();
