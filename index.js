@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 let mongoose = require("mongoose");
 require("dotenv").config();
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/budgetApp";
+var MONGODB_URI = "mongodb+srv://selenasolis:Ss-419057@selena-practice-s1rzj.mongodb.net/budgetApp" || "mongodb://localhost/budgetApp";
 const options = {
   useNewUrlParser: true,
   useCreateIndex: true,
