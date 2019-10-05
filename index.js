@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use('/users', userRoute);
 
 if(process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("client"));
 }
 
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
