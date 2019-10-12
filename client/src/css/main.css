@@ -165,27 +165,39 @@ body {
 }
 
 .budget-card-link {
-  background-color: #57a850;
+  font-size: 200%;
+  color: #fff!important;
+  text-transform: uppercase;
+  background: #48ad51;
+  padding: 15px;
+  border-radius: 50px;
   border: none;
-  color: rgb(14, 1, 1);
-  padding: 20px 34px;
-  text-align: center;
+}
+
+.budget-card-link:hover {
   text-decoration: none;
-  display: block;
-  font-size: 1.5rem;
-  margin: 4px 2px;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
 
 .expense-card-link {
-  background-color: #c02525;
+  font-size: 200%;
+  color: #fff!important;
+  text-transform: uppercase;
+  background: #9e3e3e;
+  padding: 15px;
+  border-radius: 50px;
   border: none;
-  color: rgb(14, 1, 1);
-  padding: 20px 34px;
-  text-align: center;
+}
+
+.expense-card-link:hover {
   text-decoration: none;
-  display: block;
-  font-size: 1.5rem;
-  margin: 4px 2px;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
 }
 
 .form-group {
