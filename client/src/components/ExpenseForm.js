@@ -19,9 +19,12 @@ class ExpenseForm extends Component {
         let expAmtNum = Number(expAmtStr)
         expAmtNum = expAmtNum.toFixed(2);
         expAmtNum = Number(expAmtNum)
+        let d = new Date;
+
         let newExpObj = {
             expDesc: this.state.newExpenseDesc,
-            expAmt: expAmtNum
+            expAmt: expAmtNum,
+            expDate: d.toLocaleDateString("en-US")
         }
         let user = this.state.user
         user.expenses.push(newExpObj)

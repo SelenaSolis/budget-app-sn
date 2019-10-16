@@ -13,11 +13,14 @@ function ExpenseListForm(props) {
                     <h5 className="list-item">edit</h5>
                 </div>
             </div>
-              {props.expenses.map(exp =>
+              {props.expenses.map((exp, index) =>
                 <ExpenseList 
+                    key = {index}
+                    id = {index}
                     desc = {exp.expDesc}
                     amt = {exp.expAmt}
-                /> 
+                    date = {exp.expDate}
+                />
             )}
         </div>
     )
