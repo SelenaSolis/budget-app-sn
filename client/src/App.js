@@ -7,8 +7,17 @@ import ExpenseListForm from './components/ExpenseListForm';
 import InfoBox from './components/InfoBox';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.handler = this.handler.bind(this);
+  }
+
     state = {
         user: {}
+    }
+
+    handler(newObj){
+      this.setState({user: newObj})
     }
 
     componentDidMount() {
@@ -28,7 +37,10 @@ class App extends Component {
                                     <h1 className="text-uppercase mb-4">budget app</h1>
                                     
                                         {/*BudgetForm*/}
-                                        <BudgetForm />
+                                        <BudgetForm 
+                                          handler = {this.handler}
+                                          user = {this.state.user}
+                                        />
 
                                         {/*ExpenseForm*/}
                                         <ExpenseForm

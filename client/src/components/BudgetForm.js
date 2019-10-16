@@ -7,9 +7,10 @@ class BudgetForm extends Component {
     }
 
     componentDidMount() {
-        fetch('/users')
-            .then(res => res.json())
-            .then(data => this.setState({ user: data[0] }))
+      this.setState({user: this.props.user})
+        // fetch('/users')
+        //     .then(res => res.json())
+        //     .then(data => this.setState({ user: data[0] }))
     }
     handleSubmit = (e) => {
         fetch('/users', {
@@ -38,7 +39,7 @@ class BudgetForm extends Component {
                                 </div>
                                 <div className="modal-footer">
                                     <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="submit" className="btn btn-primary" data-dismiss="modal" onClick={this.handleSubmit}>Save changes</button>
+                                    <button type="submit" className="btn btn-primary" data-dismiss="modal" onClick={()=>{this.props.handler(this.state.user)}}>Save changes</button>
                                 </div>
                             </div>
                         </div>
