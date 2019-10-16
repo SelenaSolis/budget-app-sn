@@ -5,7 +5,7 @@ This project is an example of the budget app will work for one user. This budget
 
 
 
-##Overview
+## Overview
 Currently, the user is only able to store one budget and only store budget in US Dollars.  Creating a new budget will override the previous one. As the expenses are created, they are displayed in an easy-to-read list.
 
 <img src="images/BudgetAppScreenShot2.png" />
@@ -14,7 +14,7 @@ To create an expense using different currencies you can use the dropdown list to
 
 <img src="images/conversionScreenShot2.png" />
 
-##Getting Started
+## Getting Started
 
 These instructions will allow you to run this project locally on your machine.
 
