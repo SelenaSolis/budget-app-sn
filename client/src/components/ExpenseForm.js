@@ -9,9 +9,9 @@ class ExpenseForm extends Component {
     }
 
     componentDidMount() {
-        fetch('/users')
-            .then(res => res.json())
-            .then(data => this.setState({ user: data[0] }))
+      fetch('/users')
+      .then(res => res.json())
+      .then(data => this.setState({ user: data[0] }))
     }
 
     handleSubmit = (e) => {
@@ -20,7 +20,6 @@ class ExpenseForm extends Component {
         expAmtNum = expAmtNum.toFixed(2);
         expAmtNum = Number(expAmtNum)
         let d = new Date;
-
         let newExpObj = {
             expDesc: this.state.newExpenseDesc,
             expAmt: expAmtNum,

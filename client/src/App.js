@@ -55,7 +55,7 @@ class App extends Component {
                             </div>
                             {/*ExpenseList*/}
                             <ExpenseListForm
-                                expenses={this.state.user.expenses}
+                              user = {this.state.user}
                             />
                         </div>
                     </header>

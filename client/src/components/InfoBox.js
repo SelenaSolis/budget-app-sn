@@ -25,7 +25,7 @@ function InfoBox(props) {
                 <h6 className="text-uppercase info-title">expenses</h6>
                 <span className="expense-icon"><i className="far"></i></span>
                 <h4 className="text-uppercase mt-2 expense" id="expense"><span>$ </span><span
-                    id="expense-amount">{expenseAmts}</span></h4>
+                    id="expense-amount">{expenseAmts.toFixed(2)}</span></h4>
             </div>
             <div className="col text-center">
                 <h6 className="text-uppercase info-title">balance</h6>

@@ -1,23 +1,40 @@
-import React from "react";
+import React, { Component } from 'react';
 
-function ExpenseList(props) {
+class ExpenseList extends Component {
+
+  deleteExp(id){
+    let userObj = this.props.user
+    let expenses = this.props.user.expenses
+    expenses.splice(id,1);
+    userObj.expenses = expenses;
+    console.log(userObj)
+    fetch('/users', {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(userObj)
+    })
+    this.props.handler(userObj)
+  }
+
+  render(){
     return (
-        <div className="expense">
             <div className="expense-item d-flex justify-content-between align-items-baseline">
-                <h6 className="expense-title mb-0 text-uppercase list-item">{props.desc}</h6>
-                <h5 className="expense-amount mb-0 list-item">{props.amt}</h5>
-                <h5 className="expense-amount mb-0 list-item">{props.date}</h5>
-                <div class="expense-icons list-item">
-                  <a href="#" class="edit-icon mx-2" data-id={props.id}>
-                      <i class="fas fa-edit"></i>
+                <h6 className="expense-title mb-0 text-uppercase list-item">{this.props.desc}</h6>
+                <h5 className="expense-amount mb-0 list-item">{this.props.amt.toFixed(2)}</h5>
+                <h5 className="expense-amount mb-0 list-item">{this.props.date}</h5>
+                <div className="expense-icons list-item">
+                  <a href="#" className="edit-icon mx-2" id={this.props.id}>
+                      <i className="fas fa-edit"></i>
                   </a>
-                  <a href="#" class="delete-icon" data-id={props.id}>
-                      <i class="fas fa-trash"></i>
+                  <a href="#" className="delete-icon" onClick={()=>{
+                    this.deleteExp(this.props.id)
+                  }}>
+                      <i className="fas fa-trash"></i>
                   </a>
                 </div>  
-            </div>    
-        </div>
+            </div>
     )
+  }
 }
 
 export default ExpenseList;
